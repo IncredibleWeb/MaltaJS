@@ -10,7 +10,6 @@ body,
 select,
 input,
 textarea {
-    color: $font-color-fallback;
     color: $font-color;
     font-family: $font-family;
     font-weight: $font-weight;
@@ -22,5 +21,87 @@ textarea {
 
 * {
     box-sizing: border-box;
+}
+
+.content {
+    max-width: 72em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 .5em;
+    background-color: $theme-color1;
+    height: 3em;
+    box-shadow: 0 1px 3px $box-shadow-color1, 0 1px 2px $box-shadow-color2;
+    line-height: 3em;
+    color: $theme-color3;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    h3 {
+        margin: 0;
+    }
+}
+
+.arrivals-list {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    transition: opacity .2s ease-in-out;
+    padding: 0 .5em;
+    &.loading {
+        opacity: .2;
+    }
+}
+
+main {
+    margin-top: 3em;
+    width: 100%;
+    position: relative;
+}
+
+.item {
+    border-radius: 4px;
+    margin: .5em auto;
+    padding: 1em;
+    width: 100%;
+    background-color: $theme-color3;
+    text-align: left;
+    box-shadow: 0 1px 3px $box-shadow-color1, 0 1px 2px $box-shadow-color2;
+    .title,
+    .status,
+    .time {
+        display: block;
+    }
+    .title {
+        font-weight: bold;
+    }
+    .status {
+        float: right;
+        text-transform: uppercase;
+    }
+}
+
+.offline {
+    background: $theme-color2;
+    color: $theme-color3;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 1px 3px $box-shadow-color1, 0 1px 2px $box-shadow-color2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 

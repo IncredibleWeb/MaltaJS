@@ -15,7 +15,7 @@ gulp.task('build', (done) => {
 gulp.task('build_sass', ['sass_dist', 'lint_sass']);
 
 // build JS for distribution
-gulp.task('build_js', ['scripts_dist', 'lint_js']);
+gulp.task('build_js', ['scripts_dist', 'scripts_vendor', 'lint_js']);
 
 // build HTML for distribution
 gulp.task('build_html', () => {

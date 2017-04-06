@@ -1,0 +1,27 @@
+﻿{
+  "name": "Sky High Airport",
+  "short_name": "Sky High",
+  "icons": [{
+    "src": "launcher-icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "launcher-icon-2x.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "launcher-icon-4x.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "launcher-icon-8x.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }],
+  "start_url": "./",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#29bdbb",
+  "background_color": "#29bdbb"
+}

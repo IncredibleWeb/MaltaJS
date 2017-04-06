@@ -9,6 +9,7 @@ import babelify from 'babelify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
+import gutil from 'gulp-util';
 
 const b = browserify({
     entries: `${global.paths.src}/js/main.js`,
@@ -20,7 +21,10 @@ const b = browserify({
 
 // babelify JavaScript files
 gulp.task('scripts', () => {
-    return b.bundle()
+    return b.bundle().on('error', function(error) {
+            gutil.log(error.toString());
+            this.emit('end');
+        })
         .pipe(source(`${global.paths.src}/js/main.js`))
         .pipe(buffer())
         .pipe(sourcemaps.init())
@@ -31,7 +35,10 @@ gulp.task('scripts', () => {
 
 // babelify and minify JavaScript files (excludes source maps)
 gulp.task('scripts_dist', () => {
-    return b.bundle()
+    return b.bundle().on('error', function(error) {
+            gutil.log(error.toString());
+            this.emit('end');
+        })
         .pipe(source(`${global.paths.src}/js/main.js`))
         .pipe(buffer())
         .pipe(concat('script.js'))

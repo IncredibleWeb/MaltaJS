@@ -27,6 +27,9 @@ if (folder === '/src') {
 // setup server for static assets
 app.use('/', express.static(path.join(__dirname, folder)));
 
+// setup static server for mock api
+app.use('/api', express.static(path.join(__dirname, '/api')));
+
 // setup server urls
 app.get('/', function(req, res) {
     var urlSections = req.path.split('/');
