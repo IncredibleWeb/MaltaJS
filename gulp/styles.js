@@ -23,18 +23,3 @@ gulp.task('sass', () => {
         .pipe(gulp.dest(global.paths.css))
         .pipe(livereload());
 });
-
-// compile SASS (excludes sourcemaps)
-gulp.task('sass_dist', () => {
-    gulp.src(global.paths.sass)
-        .pipe(sass()).on('error', function(error) {
-            gutil.log(error.toString());
-            this.emit('end');
-        })
-        .pipe(autoprefixer())
-        .pipe(cssNano())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(global.paths.dist));
-});

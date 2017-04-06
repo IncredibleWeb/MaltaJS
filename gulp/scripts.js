@@ -32,19 +32,3 @@ gulp.task('scripts', () => {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(global.paths.src));
 });
-
-// babelify and minify JavaScript files (excludes source maps)
-gulp.task('scripts_dist', () => {
-    return b.bundle().on('error', function(error) {
-            gutil.log(error.toString());
-            this.emit('end');
-        })
-        .pipe(source(`${global.paths.src}/js/main.js`))
-        .pipe(buffer())
-        .pipe(concat('script.js'))
-        .pipe(uglify())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(global.paths.dist));
-});

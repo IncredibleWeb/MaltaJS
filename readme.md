@@ -24,6 +24,3 @@ A simple JSON file that must follow the specification available on [W3C](a href=
 
 ### Technology
 Built using traditional HTML5 and vanilla JavaScript that simulates the retrieval of data from a mock API. Throughout the application we use small bits of [KnockoutJS](http://knockoutjs.com) to handle client-side bindings, Handlebars for server-side JavaScript templates and ExpressJS to host the application.
-
-## Demo
-Demo: [https://incredibleweb.github.io/maltajs/](https://incredibleweb.github.io/maltajs/)
