@@ -1,0 +1,12 @@
+rules:
+  indentation:
+    - 1
+    - size: 4
+  empty-line-between-blocks:
+    - 0
+  no-vendor-prefixes:
+    - 0
+  property-sort-order:
+    - 0
+  no-duplicate-properties: 
+    - ignore_consecutive: true

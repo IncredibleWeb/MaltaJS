@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{data.metaTitle}}</title>
+    <style type="text/css">{{{data.inlineStyles}}}</style>
+</head>
+
+<body>
+    {{> header }}
+    
+    {{{body}}}
+
+    {{> async-css }}
+
+    {{#each data.remoteScripts}}
+    <script src="{{this}}" async></script>
+    {{~/each}}
+</body>
+
+</html>

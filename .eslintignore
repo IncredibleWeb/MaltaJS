@@ -1,0 +1,5 @@
+dist/
+gulp/
+.esdoc.json
+gulpfile.babel.js
+package.json

@@ -1,0 +1,17 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": false
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "space-before-function-paren": ["error", "never"],
+    "indent": ["error", 4]
+  }
+}

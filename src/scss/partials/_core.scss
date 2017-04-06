@@ -1,0 +1,26 @@
+html {
+    background-color: $background-color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    position: relative;
+}
+
+body,
+select,
+input,
+textarea {
+    color: $font-color-fallback;
+    color: $font-color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-size: $font-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+

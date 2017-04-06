@@ -1,0 +1,31 @@
+$base-font-family: unquote('sans-serif');
+$background-color: #f6f6f6;
+$font-family: 'Roboto', sans-serif;
+$theme-color1: #ff543f;
+$theme-color2: #5d6e7f;
+$theme-color3: #fff;
+$theme-color4: #fafafa;
+$disabled-color: #ccc;
+$line-height: 1.5em;
+$font-size: 16px;
+$font-color: rgba(0, 0, 0, .9);
+$font-color-fallback: #000;
+$font-weight: 300;
+$max-width: 78em;
+$box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+
+@mixin breakpoint($point: desktop) {
+    @if $point == desktop-xxl {
+        @media only screen and (min-width: 90em) {
+            @content;
+        }
+    } @else if $point == desktop-l {
+        @media only screen and (min-width: 78em) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: 48em) {
+            @content;
+        }
+    }
+}
