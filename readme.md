@@ -1,6 +1,11 @@
 # MaltaJS Progressive Web App Demo
 A progressive web app that was used during the MaltaJS presentation that demonstrates the use of Service Workers, Cache API and offline functionality; the use of a Manifest for Web and Add to Homescreen.
 
+## Usage
+- Run npm install in the root directory to install all dependencies
+- Run gulp to build the local development environment or gulp watch to set up watches
+- Run npm start to start the local dev server using ExpressJS
+
 ## Progressive Web Apps
 “Progressive web apps are ordinary mobile-friendly web applications that may be progressively enhanced into native-like applications through the modern browser.”
 
