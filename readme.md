@@ -3,8 +3,7 @@ A progressive web app that was used during the MaltaJS presentation that demonst
 
 ## Usage
 - Run npm install in the root directory to install all dependencies
-- Run gulp to build the local development environment or gulp watch to set up watches
-- Run npm start to start the local dev server using ExpressJS
+- Run npm start to run gulp and start a local dev server using ExpressJS
 
 ## Progressive Web Apps
 “Progressive web apps are ordinary mobile-friendly web applications that may be progressively enhanced into native-like applications through the modern browser.”

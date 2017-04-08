@@ -52,7 +52,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "start": "node app.js",
-    "startdist": "node app.js /dist"
+    "start": "gulp && node app.js"
   }
 }

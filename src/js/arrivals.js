@@ -78,9 +78,9 @@ export default class {
             return self.adapter.toArrivalViewModels(response);
         }).then(function(response) {
             // check if bindings have already been applied
-            if (!!!Knockout.dataFor(element)) {
+            if (!Knockout.dataFor(element)) {
                 // bind to the UI
-                Knockout.applyBindings(response, element)
+                Knockout.applyBindings(response, element);
             }
             element.classList.remove('loading');
         });
